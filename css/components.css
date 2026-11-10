@@ -1,0 +1,374 @@
+/* ==========================================================================
+   components.css - thành phần tái sử dụng: button, card, tag, badge, timeline,
+   FAQ, form. Đặt tên class theo hướng BEM đơn giản (block, block-element, is-state).
+   ========================================================================== */
+
+/* ---------- Button ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border: 2px solid transparent;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 6px 16px rgb(79 70 229 / 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+.btn-outline {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--color-primary-soft);
+}
+
+.btn-sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--fs-sm);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ---------- Eyebrow / highlight / tag / badge ---------- */
+.eyebrow {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.lead {
+  font-size: var(--fs-lg);
+  color: var(--color-text-muted);
+  max-width: 56ch;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: var(--space-3);
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+}
+
+.badge {
+  position: absolute;
+  top: calc(-1 * var(--space-3));
+  right: var(--space-6);
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-accent);
+  color: #1f2937;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  border-radius: var(--radius-full);
+}
+
+/* ---------- Card (box model: padding, border, margin rõ ràng) ---------- */
+.card {
+  position: relative;
+  padding: var(--space-8) var(--space-6);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.card > * + * {
+  margin-top: var(--space-3);
+}
+
+.card p {
+  color: var(--color-text-muted);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.mentor-card {
+  text-align: center;
+}
+
+.avatar {
+  margin-inline: auto;
+  border-radius: 50%;
+  border: 4px solid var(--color-primary-soft);
+}
+
+.card .role {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* ---------- Pricing ---------- */
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card .btn {
+  margin-top: auto; /* đẩy nút xuống đáy card để các card cao bằng nhau */
+}
+
+.pricing-card.is-featured {
+  border: 2px solid var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.price strong {
+  font-size: var(--fs-h2);
+  color: var(--color-text);
+}
+
+.price span {
+  margin-left: var(--space-1);
+  font-size: var(--fs-sm);
+}
+
+.pricing-card .check-list {
+  display: grid;
+  gap: var(--space-2);
+  padding-block: var(--space-2) var(--space-6);
+}
+
+.check-list li {
+  position: relative;
+  padding-left: var(--space-6);
+}
+
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+/* ---------- Timeline ---------- */
+.timeline {
+  display: grid;
+  gap: var(--space-6);
+  counter-reset: none;
+}
+
+.timeline-item {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.timeline-step {
+  flex: 0 0 48px;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.timeline-body {
+  flex: 1;
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.timeline-body p {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+/* ---------- FAQ ---------- */
+.faq-list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+
+.faq-item summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  font-size: var(--fs-h3);
+  color: var(--color-primary);
+  transition: transform var(--transition);
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  padding: 0 var(--space-6) var(--space-4);
+  color: var(--color-text-muted);
+}
+
+/* ---------- Form ---------- */
+.register-form {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-8) var(--space-6);
+  background: var(--color-bg);
+  color: var(--color-text);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: var(--fs-sm);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg);
+  border: 1px solid #9ca3af;
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(79 70 229 / 0.2);
+  outline: none;
+}
+
+/* Chỉ báo lỗi sau khi người dùng đã nhập (tránh đỏ ngay khi tải trang) */
+.form-group input:user-invalid {
+  border-color: var(--color-error);
+}
+
+.hint {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+/* ---------- Hamburger (menu mobile) ---------- */
+.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-toggle-label {
+  display: grid;
+  place-items: center;
+  width: 44px; /* vùng chạm tối thiểu 44x44px */
+  height: 44px;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.nav-toggle:focus-visible + .nav-toggle-label {
+  outline: 3px solid var(--color-accent);
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.hamburger {
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before { top: -7px; }
+.hamburger::after { top: 7px; }
+
+.nav-toggle:checked + .nav-toggle-label .hamburger {
+  background: transparent;
+}
+
+.nav-toggle:checked + .nav-toggle-label .hamburger::before {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle:checked + .nav-toggle-label .hamburger::after {
+  transform: translateY(-7px) rotate(-45deg);
+}
