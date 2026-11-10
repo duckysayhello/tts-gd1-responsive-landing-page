@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechStart Internship - chương trình thực tập Frontend 16 tuần dành cho sinh viên công nghệ thông tin.">
+  <title>TechStart Internship | Chương trình thực tập Frontend</title>
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Link bỏ qua điều hướng cho người dùng bàn phím / trình đọc màn hình -->
+  <a class="skip-link" href="#main-content">Bỏ qua điều hướng</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="TechStart Internship - về đầu trang">
+        <img src="assets/images/logo.svg" alt="" width="36" height="36">
+        <span>TechStart</span>
+      </a>
+
+      <!-- Menu mobile dùng checkbox thuần CSS, không cần JavaScript -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span class="visually-hidden">Mở / đóng menu</span>
+        <span class="hamburger" aria-hidden="true"></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <ul class="nav-list">
+          <li><a href="#features">Lợi ích</a></li>
+          <li><a href="#roadmap">Lộ trình</a></li>
+          <li><a href="#mentors">Mentor</a></li>
+          <li><a href="#pricing">Gói học</a></li>
+          <li><a href="#faq">Hỏi đáp</a></li>
+          <li><a class="btn btn-primary btn-sm" href="#register">Đăng ký</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow">Khóa thực tập 2026 · 16 tuần</p>
+          <h1 id="hero-title">Trở thành <span class="highlight">Frontend Developer</span> qua dự án thật</h1>
+          <p class="lead">Học HTML, CSS, JavaScript và React cùng mentor có kinh nghiệm. Mỗi giai đoạn đều có mini project, code review và đánh giá rõ ràng.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#register">Đăng ký ngay</a>
+            <a class="btn btn-outline" href="#roadmap">Xem lộ trình</a>
+          </div>
+          <ul class="hero-stats" aria-label="Số liệu chương trình">
+            <li><strong>120+</strong><span>Thực tập sinh</span></li>
+            <li><strong>16</strong><span>Tuần học</span></li>
+            <li><strong>92%</strong><span>Hoàn thành</span></li>
+          </ul>
+        </div>
+        <figure class="hero-media">
+          <img src="assets/images/hero.svg" alt="Minh họa thực tập sinh đang lập trình giao diện web trên laptop" width="520" height="420">
+        </figure>
+      </div>
+    </section>
+
+    <!-- FEATURES: dùng CSS Grid -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Vì sao chọn TechStart</p>
+          <h2 id="features-title">Học đúng thứ doanh nghiệp cần</h2>
+          <p>Nội dung được thiết kế theo yêu cầu tuyển dụng Frontend thực tế.</p>
+        </header>
+
+        <div class="feature-grid">
+          <article class="card feature-card">
+            <img class="feature-icon" src="assets/images/icon-code.svg" alt="" width="48" height="48">
+            <h3>Dự án thực tế</h3>
+            <p>Mỗi giai đoạn kết thúc bằng một mini project được mentor review từng dòng code.</p>
+          </article>
+          <article class="card feature-card">
+            <img class="feature-icon" src="assets/images/icon-mentor.svg" alt="" width="48" height="48">
+            <h3>Mentor 1 kèm 5</h3>
+            <p>Mentor theo sát tiến độ, giải đáp thắc mắc và định hướng nghề nghiệp hằng tuần.</p>
+          </article>
+          <article class="card feature-card">
+            <img class="feature-icon" src="assets/images/icon-device.svg" alt="" width="48" height="48">
+            <h3>Responsive &amp; Accessibility</h3>
+            <p>Thực hành dựng giao diện chạy tốt trên mọi thiết bị và thân thiện với mọi người dùng.</p>
+          </article>
+          <article class="card feature-card">
+            <img class="feature-icon" src="assets/images/icon-certificate.svg" alt="" width="48" height="48">
+            <h3>Chứng nhận</h3>
+            <p>Nhận chứng nhận hoàn thành và cơ hội trở thành nhân viên chính thức.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP: danh sách có thứ tự -->
+    <section class="section section-alt" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Lộ trình 4 giai đoạn</p>
+          <h2 id="roadmap-title">Từ nền tảng đến sản phẩm hoàn chỉnh</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item">
+            <span class="timeline-step" aria-hidden="true">1</span>
+            <div class="timeline-body">
+              <h3>HTML &amp; CSS Fundamentals</h3>
+              <p>Semantic HTML, box model, Flexbox, Grid, responsive design.</p>
+              <span class="tag">Tuần 1 – 4</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-step" aria-hidden="true">2</span>
+            <div class="timeline-body">
+              <h3>JavaScript &amp; Browser APIs</h3>
+              <p>ES6+, DOM, events, Fetch API và async/await.</p>
+              <span class="tag">Tuần 5 – 8</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-step" aria-hidden="true">3</span>
+            <div class="timeline-body">
+              <h3>React Application Development</h3>
+              <p>Component, hooks, routing, form và tích hợp REST API.</p>
+              <span class="tag">Tuần 9 – 12</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-step" aria-hidden="true">4</span>
+            <div class="timeline-body">
+              <h3>Quality &amp; Final Project</h3>
+              <p>Testing, tối ưu hiệu năng, Git flow và triển khai.</p>
+              <span class="tag">Tuần 13 – 16</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- MENTORS: Flexbox -->
+    <section class="section" id="mentors" aria-labelledby="mentors-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Đội ngũ</p>
+          <h2 id="mentors-title">Mentor đồng hành</h2>
+        </header>
+
+        <div class="mentor-list">
+          <article class="card mentor-card">
+            <img class="avatar" src="assets/images/avatar-1.svg" alt="Ảnh đại diện mentor Nguyễn An" width="96" height="96">
+            <h3>Nguyễn An</h3>
+            <p class="role">Senior Frontend Engineer</p>
+            <p>8 năm kinh nghiệm React, từng dẫn dắt hơn 40 thực tập sinh.</p>
+          </article>
+          <article class="card mentor-card">
+            <img class="avatar" src="assets/images/avatar-2.svg" alt="Ảnh đại diện mentor Trần Bình" width="96" height="96">
+            <h3>Trần Bình</h3>
+            <p class="role">UI/UX Developer</p>
+            <p>Chuyên design system, accessibility và tối ưu trải nghiệm người dùng.</p>
+          </article>
+          <article class="card mentor-card">
+            <img class="avatar" src="assets/images/avatar-3.svg" alt="Ảnh đại diện mentor Lê Chi" width="96" height="96">
+            <h3>Lê Chi</h3>
+            <p class="role">Tech Lead</p>
+            <p>Phụ trách code review, Git workflow và quy trình triển khai.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section section-alt" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Gói học</p>
+          <h2 id="pricing-title">Chọn hình thức phù hợp</h2>
+        </header>
+
+        <div class="pricing-grid">
+          <article class="card pricing-card">
+            <h3>Online</h3>
+            <p class="price"><strong>0đ</strong><span>/ khóa</span></p>
+            <ul class="check-list">
+              <li>Học qua tài liệu và video</li>
+              <li>Review code 2 tuần / lần</li>
+              <li>Cộng đồng hỏi đáp</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="#register">Chọn gói Online</a>
+          </article>
+          <article class="card pricing-card is-featured" aria-label="Gói phổ biến nhất: Hybrid">
+            <span class="badge">Phổ biến</span>
+            <h3>Hybrid</h3>
+            <p class="price"><strong>0đ</strong><span>/ khóa</span></p>
+            <ul class="check-list">
+              <li>2 buổi tại văn phòng / tuần</li>
+              <li>Review code hằng tuần</li>
+              <li>Tham gia dự án nội bộ</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="#register">Chọn gói Hybrid</a>
+          </article>
+          <article class="card pricing-card">
+            <h3>Full-time</h3>
+            <p class="price"><strong>3tr</strong><span>/ tháng hỗ trợ</span></p>
+            <ul class="check-list">
+              <li>Làm việc toàn thời gian</li>
+              <li>Mentor kèm 1:1</li>
+              <li>Cơ hội nhận offer</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="#register">Chọn gói Full-time</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ: details/summary là phần tử native, hỗ trợ bàn phím sẵn -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container container-narrow">
+        <header class="section-header">
+          <p class="eyebrow">Hỏi đáp</p>
+          <h2 id="faq-title">Câu hỏi thường gặp</h2>
+        </header>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Tôi cần biết gì trước khi tham gia?</summary>
+            <p>Chỉ cần kiến thức lập trình cơ bản. Lộ trình bắt đầu từ HTML &amp; CSS nền tảng.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Mỗi tuần cần dành bao nhiêu thời gian?</summary>
+            <p>Khoảng 15 – 20 giờ cho gói Online/Hybrid và 40 giờ cho gói Full-time.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Kết quả được đánh giá như thế nào?</summary>
+            <p>Mỗi giai đoạn có bài kiểm tra và mini project, mentor chấm theo rubric công khai.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTER FORM: label gắn với input, validate bằng thuộc tính HTML5 -->
+    <section class="section section-cta" id="register" aria-labelledby="register-title">
+      <div class="container register-inner">
+        <div class="register-intro">
+          <h2 id="register-title">Đăng ký nhận tư vấn</h2>
+          <p>Để lại thông tin, chúng tôi sẽ liên hệ trong vòng 24 giờ.</p>
+        </div>
+
+        <form class="register-form" action="#" method="post">
+          <div class="form-group">
+            <label for="fullname">Họ và tên <span aria-hidden="true">*</span></label>
+            <input type="text" id="fullname" name="fullname" autocomplete="name" required minlength="2" maxlength="60" placeholder="Nguyễn Văn A">
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="ban@example.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Số điện thoại</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="0[0-9]{9}" placeholder="0912345678" aria-describedby="phone-hint">
+            <small id="phone-hint" class="hint">Gồm 10 chữ số, bắt đầu bằng 0.</small>
+          </div>
+          <div class="form-group">
+            <label for="plan">Gói quan tâm</label>
+            <select id="plan" name="plan">
+              <option value="online">Online</option>
+              <option value="hybrid" selected>Hybrid</option>
+              <option value="fulltime">Full-time</option>
+            </select>
+          </div>
+          <div class="form-group form-group-full">
+            <label for="message">Lời nhắn</label>
+            <textarea id="message" name="message" rows="3" maxlength="300" placeholder="Bạn muốn hỏi thêm điều gì?"></textarea>
+          </div>
+          <button class="btn btn-primary form-group-full" type="submit">Gửi đăng ký</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <img src="assets/images/logo.svg" alt="" width="32" height="32">
+          <span>TechStart</span>
+        </a>
+        <p>Chương trình thực tập Frontend dành cho sinh viên.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Liên kết chân trang">
+        <h2 class="footer-title">Liên kết</h2>
+        <ul>
+          <li><a href="#features">Lợi ích</a></li>
+          <li><a href="#roadmap">Lộ trình</a></li>
+          <li><a href="#faq">Hỏi đáp</a></li>
+        </ul>
+      </nav>
+      <address class="footer-contact">
+        <h2 class="footer-title">Liên hệ</h2>
+        <p>144 Xuân Thủy, Cầu Giấy, Hà Nội</p>
+        <p><a href="mailto:internship@techstart.vn">internship@techstart.vn</a></p>
+      </address>
+    </div>
+    <p class="copyright">&copy; 2026 TechStart. Dự án thực hành giai đoạn 1.</p>
+  </footer>
+</body>
+</html>
