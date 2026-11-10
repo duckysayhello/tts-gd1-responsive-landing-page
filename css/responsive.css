@@ -1,0 +1,122 @@
+/* ==========================================================================
+   responsive.css - breakpoint theo hướng mobile-first (min-width)
+   - >= 640px  : tablet dọc
+   - >= 960px  : tablet ngang / laptop
+   - >= 1200px : desktop lớn
+   ========================================================================== */
+
+@media (min-width: 640px) {
+  .register-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-group-full {
+    grid-column: 1 / -1;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-inner {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  /* Hiện menu ngang, ẩn nút hamburger */
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .main-nav {
+    display: block;
+    flex-basis: auto;
+    padding-bottom: 0;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .hero {
+    padding-block: var(--space-20);
+  }
+
+  /* Hero 2 cột: nội dung rộng hơn hình minh họa */
+  .hero-inner {
+    grid-template-columns: 1.1fr 1fr;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pricing-card.is-featured {
+    transform: scale(1.04);
+  }
+
+  .pricing-card.is-featured:hover {
+    transform: scale(1.04) translateY(-4px);
+  }
+
+  .register-inner {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
+  /* Timeline 4 cột với đường nối ngang */
+  .timeline {
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 12%;
+    right: 12%;
+    height: 2px;
+    background: var(--color-border);
+    z-index: 0;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .timeline-body {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    padding-block: var(--space-20);
+  }
+}
+
+/* In ấn: bỏ header sticky, nền tối và hiệu ứng */
+@media print {
+  .site-header,
+  .hero-actions,
+  .register-form {
+    display: none;
+  }
+
+  .section-cta,
+  .site-footer {
+    background: none;
+    color: #000;
+  }
+}
